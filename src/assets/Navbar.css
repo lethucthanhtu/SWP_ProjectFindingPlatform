@@ -1,0 +1,21 @@
+#Findhub{
+     display: block;
+
+
+    margin-left: 150px;
+}
+#Find{
+    color:#304098;
+    display: inline-block;
+    margin-left: 130px;
+}
+#Hub{
+    display: inline-block;
+    color:#70B6E5;
+}
+#avatar{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+   
+}
