@@ -1,8 +1,14 @@
+*{
+    margin:0;
+    padding: 0;
+
+}
+
 #Findhub{
      display: block;
 
 
-    margin-left: 150px;
+    /* margin-left: 150px; */
 }
 #Find{
     color:#304098;
