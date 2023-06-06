@@ -14,7 +14,7 @@ import {
   Chip
 } from "@mui/material";
 import React from "react";
-import SearchIcon from "@mui/icons-material/Search";
+import SearchIcon from '@mui/icons-material/Search';
 import About from "./About";
 import Project from "./Project";
 import Profile from "./Profile";
@@ -25,7 +25,7 @@ import "../assets/Navbar.css"
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
   justifyContent: "space-between",
-  backgroundColor: "#fff",
+  backgroundColor: "white",
   color: "#000",
    
 });
@@ -42,16 +42,16 @@ const Links = styled(Toolbar)({
  
 });
 const Search = styled("div")(() => ({
-  backgroundColor: "snow",
+  backgroundColor: "gray",
   color:"white",
   padding: "0 10px",
-   height: "34px",
-  borderRadius: "34px",
+   height: "28px",
+  
   width: "270px",
-  boxShadow: "2px 5px 11px 4px rgba(000, 255, 255, 0.17)",
+  boxShadow: "0.5 0.5 0.5 0.5 0.5",
   marginTop: "10px",
   position: "relative",
-  
+   
 }));
 
 const Avatars = styled(Chip)(({ theme }) => ({
@@ -71,11 +71,11 @@ const Icons_Container = styled(IconButton)(({ theme }) => ({
  
    position: "absolute",
    left: "680px",
-   top:"50%",
+   top:"57%",
    transform: "translateY(-50%)",
    "&:hover":{
     backgroundColor: "skyblue",
-
+    borderRadius:"29px",
    },
 }));
 
@@ -89,18 +89,21 @@ const Searching = styled(Box)(({ theme }) => ({
   display:"flex",
   marginLeft: "120px",
   width:"280px",
-  height:"150px",
-  boxShadow: "0.5px 0.5px 0.5px 0.5px ",
-  borderRadius:"75px",
+  height:"50px",
+   
+ 
    
    
 }));
 
 
 
-export const Navbar = () => {
+function  Navbar()  {
   return (
-    <AppBar position="sticky">
+    <AppBar position="absolute"  sx={{
+      height:"60px",
+      width:"100%"
+    }}>
       <StyledToolbar>
         {/* Findhub */}
        <div id="FindHub">
@@ -124,14 +127,22 @@ export const Navbar = () => {
               backgroundColor:"white",
               color:"black",
               width:"100%",
+              borderRadius:"40px",
+              height:"40px",
+             marginTop:"10px",
+              border:"2px solid black",
+              paddingLeft:"2px",
             }} />
          
            
           
 
-          <Icons_Container position="absolute">
+          <Icons_Container position="absolute" >
 
-          <IconButton disableRipple >
+          <IconButton disableRipple sx={{
+            height:"28px",
+            borderRadius:"20px",
+          }} >
           
           <SearchIcon />
         
@@ -181,3 +192,4 @@ export const Navbar = () => {
     </AppBar>
   );
 };
+export default Navbar

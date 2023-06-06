@@ -15,13 +15,13 @@ const list = styled(ListItemButton)({
   display:"block",
   marginLeft:"20px",
   paddingLeft:"20px",
-  fontSize:"20px",
-  width:"400px",
+  fontSize:"10px",
+  width:"40px",
 })
 
 
 
-export const Sidebar = () => {
+function Sidebar  () {
   return (
      
        <Box sx={{
@@ -30,16 +30,17 @@ export const Sidebar = () => {
         border:"1px solid black",
         marginTop:"60px",
         paddingBottom:"20px",
-        height:"100%",
+        height:"500px",
         borderRadius:"50px",
         backgroundColor:"skyblue",
+        width:"250px"
        }}>
         <ListItem sx={{
           display:"block",
           textAlign:"center",
            marginLeft:"20px",
            marginRight:"20px",
-           width:"200px",
+           width:"100px",
             
         }}>
           
@@ -58,7 +59,7 @@ export const Sidebar = () => {
 
         <Button component="a" href="#" sx={{
           display:"block",
-          width:"75%",
+          width:"165px",
           height:"50px",
           backgroundColor:"white",
           borderRadius:"50px",
@@ -70,6 +71,7 @@ export const Sidebar = () => {
             marginLeft:"30px",
             alignItems:"center",
            }} />
+
          </Button>
        
 {/* On-going */}
@@ -117,3 +119,4 @@ export const Sidebar = () => {
     
   );
 };
+export default Sidebar
