@@ -24,7 +24,8 @@ import theme from "../theme";
 import "../assets/Navbar.css"
  import avatar from"../assets/img/customer.png"
  import Dashboard from "./Dashboard";
- import {  Route, Routes, Link, NavLink } from "react-router-dom";
+ import {  Route, Routes, Link, NavLink, redirect } from "react-router-dom";
+  
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
   justifyContent: "center",
@@ -147,13 +148,15 @@ function  Navbar()  {
 <div id='list_link' >
 <ul   >
   <Link  to="/Dashboard" id='list_item'> Dashboard </Link>
-  <Link to="/" id='list_item' >About</Link>
+  <Link to="/About" id='list_item' >About</Link>
+  <redirect from='/Navbar.jsx' to='/Dashboard.js' />
   <li id='list_item'> <a href="#" >Project</a></li>
   <li id='list_item'> <a href="#" >Profile</a></li>      
         </ul>
 
-        <Routes>
-          <Route  path="/"  element={<About/>} />
+         
+         <Routes>
+          <Route  path="/About"  element={<About/>} />
           <Route  path="/Dashboard" element={<Dashboard/>} />
           
         </Routes>

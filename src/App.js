@@ -10,7 +10,7 @@ import SignInSide from "./components/SignInSide";
 function App() {
   return (
     <Box>
-     <SignInSide/>
+     <Navbar/>
       <Stack direction="row" spacing= {8}  >
      
         
