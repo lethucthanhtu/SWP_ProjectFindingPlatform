@@ -33,7 +33,6 @@ function Copyright(props) {
     </Typography>
   );
 }
-
 const drawerWidth = 240;
 
 const AppBar = styled(MuiAppBar, {
