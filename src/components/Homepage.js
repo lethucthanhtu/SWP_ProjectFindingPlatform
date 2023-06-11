@@ -15,17 +15,25 @@ import Bean from "../assets/img/Bean.png";
 import "../assets/Banner.css";
 
 export const Homepage = () => {
+
+ 
+// 
+
+
+
+
+
   return (
     <div>
       <div id="Banner1">
       <div id="block1">
           <div id="box2">
-            <h1 id="text4">Develop </h1>
+            <h1 id="text4">&#123;Develop&#125; </h1>
           </div>
 {/*  */}
           <div id="box4">
-            <h1 id="">your </h1>
-            <h1 id="text4_sup">Career</h1>
+            <h1 id="">your</h1>
+            <h1 id="text4_sup">&lt;Career&#47;&gt;</h1>
           </div>   
 {/*  */}
           <div>

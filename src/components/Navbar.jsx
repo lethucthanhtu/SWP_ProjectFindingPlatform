@@ -11,7 +11,8 @@ import {
   Stack,
   Container,
   IconButton,
-  Chip
+  Chip,
+
 } from "@mui/material";
 import React from "react";
 import SearchIcon from '@mui/icons-material/Search';
@@ -22,6 +23,8 @@ import Home from "./Home";
 import theme from "../theme";
 import "../assets/Navbar.css"
  import avatar from"../assets/img/customer.png"
+ import Dashboard from "./Dashboard";
+ import {  Route, Routes, Link, NavLink } from "react-router-dom";
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
   justifyContent: "center",
@@ -143,11 +146,19 @@ function  Navbar()  {
 {/* Links + Avatars */}
 <div id='list_link' >
 <ul   >
-  <li id='list_item'> <a href="#" >Home</a></li>
-  <li id='list_item'> <a href="#" >About</a></li>
+  <Link  to="/Dashboard" id='list_item'> Dashboard </Link>
+  <Link to="/" id='list_item' >About</Link>
   <li id='list_item'> <a href="#" >Project</a></li>
   <li id='list_item'> <a href="#" >Profile</a></li>      
         </ul>
+
+        <Routes>
+          <Route  path="/"  element={<About/>} />
+          <Route  path="/Dashboard" element={<Dashboard/>} />
+          
+        </Routes>
+
+        
 </div>
        
 <Stack direction="row" spacing={1} sx={{
