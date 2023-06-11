@@ -11,7 +11,8 @@ import {
   Stack,
   Container,
   IconButton,
-  Chip
+  Chip,
+
 } from "@mui/material";
 import React from "react";
 import SearchIcon from '@mui/icons-material/Search';
@@ -21,10 +22,13 @@ import Profile from "./Profile";
 import Home from "./Home";
 import theme from "../theme";
 import "../assets/Navbar.css"
- 
+ import avatar from"../assets/img/customer.png"
+ import Dashboard from "./Dashboard";
+ import {  Route, Routes, Link, NavLink, redirect } from "react-router-dom";
+  
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
-  justifyContent: "space-between",
+  justifyContent: "center",
   backgroundColor: "white",
   color: "#000",
    
@@ -80,16 +84,16 @@ const Icons_Container = styled(IconButton)(({ theme }) => ({
 }));
 
 const Findhub = styled(Typography)(({ theme }) => ({
-  marginLeft: "120px",
+  marginLeft: "",
   fontWeight:"bold",
   
   
 }));
 const Searching = styled(Box)(({ theme }) => ({
-  display:"flex",
-  marginLeft: "120px",
-  width:"280px",
-  height:"50px",
+  // display:"flex",
+  // marginLeft: "120px",
+  // width:"280px",
+  // height:"50px",
    
  
    
@@ -100,11 +104,8 @@ const Searching = styled(Box)(({ theme }) => ({
 
 function  Navbar()  {
   return (
-    <AppBar position="absolute"  sx={{
-      height:"60px",
-      width:"100%"
-    }}>
-      <StyledToolbar>
+     
+      <div id='Container' > 
         {/* Findhub */}
        <div id="FindHub">
        <h1 id="Find">Find</h1>
@@ -120,76 +121,62 @@ function  Navbar()  {
         
 {/* Thanh Search */}
 
-        <Searching >
+        <Searching id='Search_Container' >
+<div id='Search_Bar'>
+
+           <div id='Search_Input'>
+         <InputBase  id='Search_Input' position="relative" placeholder="Search here..." sx={{
            
-         
-            <InputBase position="relative" placeholder="Search here..." sx={{
-              backgroundColor:"white",
-              color:"black",
-              width:"100%",
-              borderRadius:"40px",
-              height:"40px",
-             marginTop:"10px",
-              border:"2px solid black",
-              paddingLeft:"2px",
             }} />
-         
-           
-          
+         </div>
+                       
+        
 
-          <Icons_Container position="absolute" >
-
-          <IconButton disableRipple sx={{
-            height:"28px",
-            borderRadius:"20px",
-          }} >
+          <button id='Search_Button'> 
           
           <SearchIcon />
-        
-        </IconButton>
-          </Icons_Container>
+            
+        </button>
+         
            
            
-           
-           
+ </div>
+          
+                 
         </Searching>
 {/* Links + Avatars */}
-<Links>
-<Stack direction={"row"} spacing={5}>
-          <Home />
-          <About />
-          <Project />
-          <Profile />
-        </Stack>
-</Links>
+<div id='list_link' >
+<ul   >
+  <Link  to="/Dashboard" id='list_item'> Dashboard </Link>
+  <Link to="/About" id='list_item' >About</Link>
+  <redirect from='/Navbar.jsx' to='/Dashboard.js' />
+  <li id='list_item'> <a href="#" >Project</a></li>
+  <li id='list_item'> <a href="#" >Profile</a></li>      
+        </ul>
+
+         
+         <Routes>
+          <Route  path="/About"  element={<About/>} />
+          <Route  path="/Dashboard" element={<Dashboard/>} />
+          
+        </Routes>
+
+        
+</div>
        
 <Stack direction="row" spacing={1} sx={{
     marginRight:"10px",
 
 }}>
        
-      <Chip sx={{display:"flex",
-      marginRight:"20px",
-    width:"112px",
-  height:"42px",
-}}
-         avatar={<Avatar
-          alt="Remy Sharp"
-          src="/static/images/avatar/1.jpg"
-          sx={{ width: 56, height: 56 }}
-        />}
-        label="Avatar"
-        variant="outlined"
-      />
+      <div id='avatar_frame'> 
+         <img id='avatar' src={avatar}/>
+         <span id='username'>Avatar</span>
+      </div>
     </Stack>
-        {/* <Avatars>
-          <Avatar src="https://www.najlepszecv.pl/wp-content/uploads/2018/12/komentarz_o_cv_2.png" />
-        </Avatars> */}
-
-
- {/* K đc dung */}
-      </StyledToolbar>
-    </AppBar>
+         
+      </div>
+     
   );
 };
 export default Navbar

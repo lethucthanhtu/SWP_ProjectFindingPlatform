@@ -1,11 +1,36 @@
 #Banner1{
-    display: block;
-    width: 1400px;
-    height: 500px;
+    display: flex;
+     width: 1395px;
+     height: 700px;
+     overflow-x:hidden;
+}
+#img1{
+    width: 50%;
+   
+}
+#block1{
+   background-color: gray;  
+    width: 50%;
+    position: relative;
+    
+    
+     
+}
+#Develop{
+    position: absolute;
 }
 #question{
     text-align: center;
     display: block;
+    font-family: 'Roboto';
+     
+font-style: normal;
+font-weight: 200px;
+font-size: 40px;
+line-height: 70px;
+text-align: center;
+letter-spacing: -0.005em;
+
 }
 #why{
      display: inline-block;
@@ -17,8 +42,120 @@
       
 }
 #findhub{
+    background: linear-gradient(250.71deg, #413CE2 -4.68%, #3B5FE2 18.63%, #5699E6 39.87%, #3CB3E2 66.86%, #9D7EEC 105.55%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
     display: inline-block;
+    padding: 0 20px 0 20px;
 }
 #Header2{
     text-align: center;
+    margin-bottom: 100px;
+}
+#contact{
+
+}
+#Icon_Container{
+    display: flex;
+    width: 1000px;
+    height: 400px;
+    justify-content: space-around;
+    list-style: none;
+    margin-left: 160px;
+    margin-top: 50px;
+    
+
+    
+}
+#Icons{
+     
+    justify-content: space-between;
+    width: 300px;
+    height: 50%;
+    /* position: absolute; */
+    margin-left: 80px;
+}
+#text{
+ width: 329px;
+height: 112px;
+left: calc(50% - 329px/2 - 454.5px);
+top: 1210px;
+margin-left: 80px;
+/* Body 2 - 14px */
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+
+letter-spacing: 0.0025em;
+}
+#company{
+display: flex;
+width: 1200px;
+height: 200px;
+justify-content: space-around;
+margin-left: 100px;
+}
+
+#line1{
+    width: 20%;
+    display: inline-block;
+    height: 50%;
+     
+}
+#line2{
+    width: 20%;
+    display: inline-block;
+    height: 50%;
+    
+}
+#text2{
+    background: linear-gradient(250.71deg, #413CE2 -4.68%, #3B5FE2 18.63%, #5699E6 39.87%, #3CB3E2 66.86%, #9D7EEC 105.55%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+   display: inline-block;
+   padding-right: 10px;
+   margin-left: 70px;
+}
+#text2_sup{
+    display: inline-block;
+    
+}
+#text3_sup{
+      
+    margin-left: 70px;
+}
+#text3{
+    color: red;
+    margin-left: 70px;
+    margin-bottom: 30px;
+}
+#text4_sup{
+      
+    color:green;
+}
+#text4{
+    background: linear-gradient(250.71deg, #413CE2 -4.68%, #3B5FE2 18.63%, #5699E6 39.87%, #3CB3E2 66.86%, #9D7EEC 105.55%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+     
+    margin-left: 20px;
+   
+}
+#box2{
+    display: flex;
+    margin-top: 120px;
+}
+#button1{
+    margin-left: 70px;
+}
+#box4{
+    display:flex;
 }
