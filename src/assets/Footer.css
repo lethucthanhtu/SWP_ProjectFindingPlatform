@@ -1,0 +1,19 @@
+#about{
+    display: block;
+    color: blue;
+    width: 1400px;
+    height: 500px;
+    
+    background-color: rgb(32, 27, 27);
+    border-radius: 60px 0 0 0;
+}
+#text{
+    margin-left: 70px;
+    padding-top: 50px;
+    
+}
+#text5{
+    padding-top: 10px;
+    color: blue;
+    padding-left: 70px;
+}
