@@ -1,0 +1,16 @@
+#status{
+
+    border: 1px solid black;
+    display: block;
+    height: 200px;
+    width: 200px;
+}
+
+#part1{
+
+
+}
+#part2{
+display: flex;
+
+}
